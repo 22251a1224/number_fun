@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: number-fun-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: number-fun-api
+  template:
+    metadata:
+      labels:
+        app: number-fun-api
+    spec:
+      containers:
+      - name: number-fun-api
+        image: charmitha05/number-fun-api:latest
+        ports:
+        - containerPort: 5000

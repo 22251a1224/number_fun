@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Fun Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if number %}
+            <h1>Fun Fact about {{ number }} 🎉</h1>
+            <p class="fact">{{ fact }}</p>
+        {% else %}
+            <h1>Error</h1>
+            <p>{{ fact }}</p>
+        {% endif %}
+        <a href="/" class="back-button">Try Another Number</a>
+    </div>
+</body>
+</html>
